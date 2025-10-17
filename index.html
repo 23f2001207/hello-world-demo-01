@@ -1,0 +1,50 @@
+Here's a minimal static web page (`index.html`) that displays 'Hello, World!' in large, bold letters, centered on the page, using HTML, CSS, and a touch of JavaScript to fulfill the "JS app" requirement.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World App</title>
+    <style>
+        /* CSS for layout and styling */
+        body {
+            margin: 0;
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            font-family: 'Arial', sans-serif; /* A clean, common font */
+            background-color: #f4f4f4; /* Light background color */
+        }
+
+        #message {
+            font-size: 5em; /* Large text size */
+            font-weight: bold; /* Bold text */
+            color: #333; /* Dark gray text color */
+            text-align: center; /* Ensure text is centered within its container */
+            padding: 20px; /* Some padding for visual breathing room */
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML to display the message -->
+    <h1 id="message">Hello, World!</h1>
+
+    <script>
+        // Minimal JavaScript to demonstrate its presence.
+        // It logs a message to the console and confirms interaction with the HTML element.
+        console.log("Hello from JavaScript! The page has loaded.");
+
+        const messageElement = document.getElementById('message');
+        if (messageElement) {
+            console.log(`Successfully found the message element with content: "${messageElement.textContent}"`);
+            // No visual change is needed for this brief, but JS is actively looking at the DOM.
+        } else {
+            console.error("Error: The 'message' element was not found in the HTML.");
+        }
+    </script>
+</body>
+</html>
+```
